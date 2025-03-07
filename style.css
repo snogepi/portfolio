@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Astralaga';
+    src: url(astralaga-regular.ttf);
+    color: #223800;
+}
+
+body{
+    background-color: #f3f9d2;
+}
+
+.content-bg {
+    background-color: #c0d684;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    height: 45rem;
+    width: 80rem;
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    scroll-behavior: smooth;
+    padding: 1.5rem;
+}
+
+.hello-test {
+    font-family: 'Astralaga';
+    src: url(astralaga-regular.ttf);
+    color: #f3f9d2;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: color 0.5s;
+    text-align: center;
+    display: inline-block;
+}
+
+.hello-test:hover {
+    color: #223800;
+}

@@ -17,8 +17,8 @@ body{
     background-color: #c0d684;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
-    height: 45rem;
-    width: 80rem;
+    height: 100rem;
+    width: 112rem;
     margin-top: 1rem;
     display: block;
     margin-left: auto;
@@ -27,17 +27,104 @@ body{
     padding: 1.5rem;
 }
 
-.hello-test {
+
+.hello-world {
     font-family: 'Astralaga';
     src: url(astralaga-regular.ttf);
-    color: #f3f9d2;
-    font-weight: bold;
+    color: #223800;
     font-size: 3rem;
     transition: color 0.5s;
-    text-align: center;
-    display: inline-block;
+    display: block;
 }
 
-.hello-test:hover {
-    color: #223800;
+.hello {
+    display: inline-block;
+    margin-left: 15rem;
 }
+
+.world {
+    display: inline-block;
+    margin-left: 35rem;
+}
+
+.to-italicize {
+    font-style: italic;
+    letter-spacing: 0.5rem;
+}
+
+hr {
+    border-top: 1px solid #223800;
+    border-bottom: 1px solid #223800;
+    margin-top: 0px;
+}
+
+
+.portfolio-parts {
+    font-family: 'Astralaga';
+    src: url(astralaga-regular.ttf);
+    font-size: 0.8rem;
+    vertical-align: top;
+}
+
+.about {
+    display: inline-block;
+    margin-left: 0rem;
+    transition: font-style 1s, letter-spacing 1s;
+    cursor: pointer;
+}
+
+.about:hover {
+    font-style: oblique;
+    letter-spacing: 0.1rem;
+}
+
+.projects {
+    display: inline-block;
+    margin-left: 45%;
+    transition: font-style 1s, letter-spacing 1s;
+    cursor:pointer;
+}
+
+.projects:hover {
+    font-style: oblique;
+    letter-spacing: 0.1rem;
+}
+
+.contact {
+    display: inline-block;
+    margin-left: 47%;
+    transition: font-style 1s, letter-spacing 1s;
+    cursor: pointer;
+}
+
+.contact:hover {
+    font-style: oblique;
+    letter-spacing: 0.1rem;
+}
+
+.intro {
+    font-family: 'Astralaga';
+    src: url(astralaga-regular.ttf);
+    color: #223800;
+    font-size: 3.5rem;
+    margin-top: 20rem;
+    letter-spacing: 0.1rem;
+}
+
+.intro-line1 {
+    margin-left: 30rem;
+}
+
+.name {
+    margin-left: 25rem;
+    margin-right: 1rem;
+}
+
+.intro-line2 {
+    margin-left: 35rem;
+}
+
+.intro-line3 {
+    margin-left: 10rem;
+}
+

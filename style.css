@@ -5,7 +5,7 @@ body {
 }
 
 .title {
-    margin-left: 3rem;
+    font-size: 10vw;
 }
 .hello {
     font-size: 7rem;
@@ -18,12 +18,11 @@ body {
 
 .to-cursive {
     font-family: "Monsieur La Doulaise", cursive;
-    text-align: center;
 }
 
 .photo-1 {
-    width: 20rem;
-    height: 20rem;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
 }

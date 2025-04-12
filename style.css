@@ -1,42 +1,45 @@
 body {
-    font-family: "Noto Serif Display", serif;
     background-color: #f3f9d2;
     color: #c0d684;
 }
 
-.title {
-    font-size: 10vw;
-}
-.hello {
-    font-size: 7rem;
-}
 
-.world {
-    margin-left: 20rem;
-    font-size: 7rem;
-}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.to-cursive {
-    font-family: "Monsieur La Doulaise", cursive;
-}
+.shadows-into-light {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.page-title {
-    font-style: italic;
-    color: #223800;
-}
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }  
 
-.photo-1 {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
-.info {
-    margin-left: 3rem;
-}
+.ballet {
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.navigation {
-    font-size: 6rem;
-    margin-left: 8rem;
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+.note {
+    margin-left: 11rem;
 }

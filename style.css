@@ -20,6 +20,11 @@ body {
     font-family: "Monsieur La Doulaise", cursive;
 }
 
+.page-title {
+    font-style: italic;
+    color: #223800;
+}
+
 .photo-1 {
     width: 100%;
     height: auto;

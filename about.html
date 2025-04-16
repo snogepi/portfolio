@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
     <!-- css -->
-    <link href="style.css" rel="stylesheet">
+    <link href="aboutStyle.css" rel="stylesheet">
   
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +18,40 @@
     <title>Christine Joyce Belen</title>
 </head>
 <body>
-    <div class="container mt-3 display-3 playfair-display" style="color: #223800; font-style: oblique;">
-        About
-    </div>
 
-    <div class="container align-items-center">
-        <div class="container montserrat">
-            <p class="col-12 col-md-7 text-end">
-                I am a BS Information Technology student set to graduate in 2027. The process of building something from scratch and watching it grow into something extraordinary and useful has always been fascinating to me, hence the dream of becoming a full-stack developer. I am always eager to learn, take on new challenges, and create things that matter.
-            </p>
-        </div>
-    
-        <div class="container montserrat">
-            <p class="col-12 col-md-7 text-end">
-                I am currently looking into internship opportunities to further expand my skills and prepare myself for employment. Once I graduate, I plan to explore a career in tech while pursuing a master’s degree in Computer Science to continuously improve my skills by learning from experts both at work and in school. Ultimately, the goal for me is to make a positive impact on society one project at a time.
-            </p>
-        </div>
+  <div class="parent-container">
+    <div class="d-block text-center mt-3">
+      <img src="1x1.jpg" class="my-photo">
     </div>
+  
+    <div class="container p-5">
+      <div class="d-block display-3 playfair-display" style="color: #223800; font-style: oblique;">
+        About
+      </div>
+  
+      <div class="desc d-block justify-content-center overflow-auto">
+        <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner montserrat text-justify">
+              <div class="carousel-item active">
+                  <div class="d-flex justify-content-center align-items-center fs-5">
+                      <p>I am a BS Information Technology student set to graduate in 2027. The process of building something from scratch and watching it grow into something extraordinary and useful has always been fascinating to me, hence the dream of becoming a full-stack developer. I am always eager to learn, take on new challenges, and create things that matter.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center fs-5">
+                      <p>I am currently looking into internship opportunities to further expand my skills and prepare myself for employment. Once I graduate, I plan to explore a career in tech while pursuing a master’s degree in Computer Science to continuously improve my skills by learning from experts both at work and in school. Ultimately, the goal for me is to make a positive impact on society one project at a time.</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+      </div>
+      </div>
+    </div>  
+  </div>
 
     <div class="row text-center fixed-bottom mb-3 fs-5 montserrat">
         <div class="col-12 col-md-3 nav-item">
@@ -50,5 +67,7 @@
           <a class="nav-link active" href="contact.html">contact</a>
         </div>
       </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

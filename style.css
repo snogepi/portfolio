@@ -43,3 +43,13 @@ body {
 .note {
     margin-left: 11rem;
 }
+
+.about-img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  border: #223800;
+  border-width: 2rem;
+  border-radius: 10rem;
+  display: inline;
+}

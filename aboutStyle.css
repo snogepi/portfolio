@@ -1,0 +1,54 @@
+@media screen and (max-width: 766px) {
+    .desc {
+        height: 40rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+.my-photo {
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+    border: #223800;
+    border-width: 2rem;
+    border-radius: 7.5rem;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+  }
+
+body {
+    background-color: #f3f9d2;
+    color: #c0d684;
+}
+
+p {
+    text-align: justify;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.carousel-indicators {
+    position: relative;
+    bottom: -1.5;
+}

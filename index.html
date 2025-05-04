@@ -33,21 +33,56 @@
     </div>
   </div>
 
-
-  <div class="row text-center fixed-bottom mb-3 fs-5 montserrat">
-    <div class="col-12 col-md-3 nav-item">
+  <div class="container text-center fixed-bottom fs-5 montserrat navbar justify-content-center">
+    <div class="col-4 col-md-4 nav-item">
       <a class="nav-link active" href="about.html">about</a>
     </div>
-    <div class="col-12 col-md-3 nav-item">
+    <div class="col-4 col-md-4 nav-item">
       <a class="nav-link active" href="techstack.html">stack</a>
     </div>
-    <div class="col-12 col-md-3 nav-item">
-      <a class="nav-link active" href="projects.html">projects</a>
-    </div>
-    <div class="col-12 col-md-3 nav-item">
+    <div class="col-4 col-md-4 nav-item">
       <a class="nav-link active" href="contact.html">contact</a>
     </div>
   </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+    
+    anime({
+      targets: '.content div',
+      opacity: [0, 1],
+      translateY: [50, 0],
+      delay: anime.stagger(300),
+      duration: 1000,
+      easing: 'easeOutExpo'
+    });
+  
+    anime({
+      targets: 'body',
+      opacity: [0, 1],
+      duration: 500,
+      easing: 'easeOutQuad'
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        anime({
+          targets: '.content div',
+          opacity: [1, 0],
+          translateY: [0, 50],
+          duration: 300,
+          easing: 'easeInQuad'
+        });
+  
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 300);
+      });
+    });
+  </script>
   
 </body>
 </html>

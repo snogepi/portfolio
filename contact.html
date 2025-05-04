@@ -6,9 +6,10 @@
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- css -->
-    <link href="style.css" rel="stylesheet">
+    <link href="aboutStyle.css" rel="stylesheet">
   
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,19 +20,94 @@
 </head>
 <body>
 
-    <div class="row text-center fixed-bottom mb-3 fs-5 montserrat">
-        <div class="col-12 col-md-3 nav-item">
-          <a class="nav-link active" href="about.html">about</a>
-        </div>
-        <div class="col-12 col-md-3 nav-item">
-          <a class="nav-link active" href="techstack.html">stack</a>
-        </div>
-        <div class="col-12 col-md-3 nav-item">
-          <a class="nav-link active" href="projects.html">projects</a>
-        </div>
-        <div class="col-12 col-md-3 nav-item">
-          <a class="nav-link active" href="index.html">home</a>
-        </div>
+  <div class="container mt-5 col-12 d-flex justify-content-center align-items-center">
+    <div class="display-3 playfair-display">I would love to hear from you!</div>
+  </div>
+
+  <div class="container text-center d-flex justify-content-center align-items-center">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <p class="fs-1 shadows-into-light"><i class="bi bi-postcard-heart"></i> Send me a mail...</p>
+  
+        <form action="https://formspree.io/f/mqaqprkj" method="POST">
+          <div class="form-floating mb-3 montserrat">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Maria dela Cruz" name="name">
+            <label for="floatingInput">Name</label>
+          </div>
+    
+          <div class="form-floating mb-3 montserrat">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+            <label for="floatingInput">Email address</label>
+          </div>
+    
+          <div class="form-floating mb-3 montserrat">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="message" style="height: 6.25rem"></textarea>
+            <label for="floatingTextarea2">Your message</label>
+          </div>
+    
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="col-12 text-end">
+            <button type="submit" class="btn montserrat">Submit</button>
+          </div>
+        </form>
       </div>
+  
+      <div class="col-12 col-md-6 text-center">
+        <p class="text-center fs-4 shadows-into-light"><i class="bi bi-chat-heart"></i> ... or reach out through any of these social platforms:</p>
+
+        <a class="soc" href="https://www.linkedin.com/in/christinejoycembelen/" target="_blank"><div class="h1 d-inline m-3"><i class="bi bi-linkedin"></i></div></a>
+        <a class="soc" href="https://github.com/snogepi" target="_blank"><div class="h1 d-inline m-3"><i class="bi bi-github"></i></div></a>
+        </a>
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="container text-center fixed-bottom fs-5 montserrat navbar justify-content-center">
+    <div class="col-4 col-md-4 nav-item">
+      <a class="nav-link active" href="about.html">about</a>
+    </div>
+    <div class="col-4 col-md-4 nav-item">
+      <a class="nav-link active" href="techstack.html">stack</a>
+    </div>
+    <div class="col-4 col-md-4 nav-item">
+      <a class="nav-link active" href="index.html">home</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+    
+    anime({
+      targets: '.container',
+      opacity: [0, 1],
+      scale: [0.95, 1],
+      duration: 1200,
+      easing: 'easeOutQuad'
+    });
+  
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetHref = this.getAttribute('href');
+  
+        anime({
+          targets: '.container',
+          opacity: [1, 0],
+          duration: 400,
+          easing: 'easeInQuad'
+        });
+  
+        setTimeout(() => {
+          window.location.href = targetHref;
+        }, 400);
+      });
+    });
+  </script>
+  
 </body>
 </html>

@@ -29,45 +29,85 @@
         About
       </div>
   
-      <div class="desc d-block justify-content-center overflow-auto">
-        <div id="textCarousel" class="carousel slide" data-bs-interval="false">
-          <div class="carousel-inner montserrat text-justify">
-              <div class="carousel-item active">
-                  <div class="d-flex justify-content-center align-items-center fs-5">
-                      <p>I am a BS Information Technology student set to graduate in 2027. The process of building something from scratch and watching it grow into something extraordinary and useful has always been fascinating to me, hence the dream of becoming a full-stack developer. I am always eager to learn, take on new challenges, and create things that matter.</p>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex justify-content-center align-items-center fs-5">
-                      <p>I am currently looking into internship opportunities to further expand my skills and prepare myself for employment. Once I graduate, I plan to explore a career in tech while pursuing a master’s degree in Computer Science to continuously improve my skills by learning from experts both at work and in school. Ultimately, the goal for me is to make a positive impact on society one project at a time.</p>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="carousel-indicators">
-              <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#textCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          </div>
+      <div class="desc d-block justify-content-center overflow-auto montserrat">
+        <p>I am a BS Information Technology student set to graduate in 2027. The process of building something from scratch and watching it grow into something extraordinary and useful has always been fascinating to me, hence the dream of becoming a full-stack developer. I am always eager to learn, take on new challenges, and create things that matter.</p>
+        <p>I am currently looking into internship opportunities to further expand my skills and prepare myself for employment. Once I graduate, I plan to explore a career in tech while pursuing a master’s degree in Computer Science to continuously improve my skills by learning from experts both at work and in school. Ultimately, the goal for me is to make a positive impact on society one project at a time.</p>
       </div>
       </div>
     </div>  
   </div>
 
-    <div class="row text-center fixed-bottom mb-3 fs-5 montserrat">
-        <div class="col-12 col-md-3 nav-item">
+    <div class="container text-center fixed-bottom fs-5 montserrat navbar justify-content-center">
+        <div class="col-4 col-md-4 nav-item">
           <a class="nav-link active" href="index.html">home</a>
         </div>
-        <div class="col-12 col-md-3 nav-item">
+        <div class="col-4 col-md-4 nav-item">
           <a class="nav-link active" href="techstack.html">stack</a>
         </div>
-        <div class="col-12 col-md-3 nav-item">
-          <a class="nav-link active" href="projects.html">projects</a>
-        </div>
-        <div class="col-12 col-md-3 nav-item">
+        <div class="col-4 col-md-4 nav-item">
           <a class="nav-link active" href="contact.html">contact</a>
         </div>
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+
+    anime({
+      targets: '.parent-container',
+      opacity: [0, 1],
+      scale: [0.95, 1],
+      duration: 1200,
+      easing: 'easeOutQuad'
+    });
+
+    anime({
+      targets: '.my-photo',
+      opacity: [0, 1],
+      scale: [0.9, 1],
+      duration: 1000,
+      easing: 'easeOutQuad',
+      delay: 400
+    });
+
+    anime({
+      targets: '.display-3',
+      opacity: [0, 1],
+      scale: [0.95, 1],
+      duration: 1200,
+      easing: 'easeOutQuad',
+      delay: 600
+    });
+
+    anime({
+      targets: '.desc p',
+      opacity: [0, 1],
+      scale: [0.95, 1],
+      duration: 1300,
+      easing: 'easeOutQuad',
+      delay: 800
+    });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetHref = this.getAttribute('href');
+
+        anime({
+          targets: '.parent-container',
+          opacity: [1, 0],
+          duration: 400,
+          easing: 'easeInQuad'
+        });
+
+        setTimeout(() => {
+          window.location.href = targetHref;
+        }, 400);
+      });
+    });
+  </script>
+
 </body>
 </html>

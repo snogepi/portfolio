@@ -1,6 +1,5 @@
 @media screen and (max-width: 766px) {
   .desc {
-    height: 40rem;
     position: relative;
     overflow-y: scroll;
     padding-bottom: 3.125rem;
@@ -15,9 +14,8 @@
   width: 100%;
   max-width: 12rem;
   height: auto;
-  border: #223800;
-  border-width: 2rem;
-  border-radius: 6rem;
+  border: 1px dashed #697f03;
+  border-radius: 3rem;
 }
 
 .parent-container {

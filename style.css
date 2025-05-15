@@ -1,57 +1,54 @@
 body {
-    background-color: #d2e571;
-    color: #697f03;
+  background-color: #d2e571;
+  color: #697f03;
 }
 
 
 .montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   }
 
 .shadows-into-light {
-    font-family: "Shadows Into Light", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
   }
 
 .playfair-display {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   }  
 
 
 .ballet {
-    font-family: "Ballet", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Ballet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.current {
+  border-radius: 0.625rem;
+  border-style: dashed;
+  border-width: 1px;
+  color: #697f03;
+}
 
 .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   }
 
 .note {
-    margin-left: 11rem;
-}
-
-.about-img {
-  width: 100%;
-  max-width: 20rem;
-  height: auto;
-  border: #223800;
-  border-width: 2rem;
-  border-radius: 10rem;
-  display: inline;
+  margin-left: 11rem;
 }
 
 .nav-link {

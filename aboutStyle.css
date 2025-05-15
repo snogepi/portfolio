@@ -1,48 +1,48 @@
 @media screen and (max-width: 766px) {
-    .desc {
-        height: 40rem;
-        position: relative;
-        overflow-y: scroll;
-        padding-bottom: 3.125rem;
-    }
+  .desc {
+    height: 40rem;
+    position: relative;
+    overflow-y: scroll;
+    padding-bottom: 3.125rem;
+  }
 
-    p {
-        font-size: 0.9rem;
-    }
+  p {
+    font-size: 0.9rem;
+  }
 }
 
 .my-photo {
-    width: 100%;
-    max-width: 12rem;
-    height: auto;
-    border: #223800;
-    border-width: 2rem;
-    border-radius: 6rem;
+  width: 100%;
+  max-width: 12rem;
+  height: auto;
+  border: #223800;
+  border-width: 2rem;
+  border-radius: 6rem;
 }
 
 .parent-container {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
   }
 
 body {
-    background-color: #d2e571;
-    color: #697f03;
+  background-color: #d2e571;
+  color: #697f03;
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .playfair-display {
   font-family: "Playfair Display", serif;
@@ -55,6 +55,13 @@ p {
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.current {
+  border-radius: 0.625rem;
+  border-style: dashed;
+  border-width: 1px;
+  color: #697f03;
 }
 
 .nav-link {

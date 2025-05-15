@@ -34,13 +34,16 @@
   </div>
 
   <div class="container text-center fixed-bottom fs-5 montserrat navbar justify-content-center">
-    <div class="col-4 col-md-4 nav-item">
+    <div class="col-3 nav-item current">
+      <a>home</a>
+    </div>
+    <div class="col-3 nav-item">
       <a class="nav-link active" href="about.html">about</a>
     </div>
-    <div class="col-4 col-md-4 nav-item">
+    <div class="col-3 nav-item">
       <a class="nav-link active" href="tech-stack.html">stack</a>
     </div>
-    <div class="col-4 col-md-4 nav-item">
+    <div class="col-3 nav-item">
       <a class="nav-link active" href="contact.html">contact</a>
     </div>
   </div>
@@ -50,11 +53,11 @@
   <script>
     
     anime({
-      targets: '.content div', // lahat ng div sa loob ng content class
+      targets: '.content div',
       opacity: [0, 1], 
       translateY: [50, 0],
-      delay: anime.stagger(300), // start ng animation ng each div 300ms after the previous one
-      duration: 1000, // tig-1s and each animation
+      delay: anime.stagger(300), 
+      duration: 1000, 
       easing: 'easeOutExpo'
     });
   

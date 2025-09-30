@@ -6,14 +6,13 @@
 
 .parent-container {
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
-  scroll-snap-align: start;
-  overflow-y: hidden;
-  height: 100vh;
-  }
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+}
 
 body {
   background-color: #d2e571;

@@ -1,91 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
-  <!-- css -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Montserrat:ital@0;1&family=Playfair+Display:ital@0;1&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
-
-  <title>Christine Joyce Belen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Homemade+Apple&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>Christine Joyce Belen</title>
 </head>
+
 <body>
+    <nav id="navbar">
+        <div id="nav-menu">
+            <a href="#landing-page">home</a>
+            <a href="#about-page">about</a>
+            <a href="#stack-page">stack</a>
+            <a href="#certifications-page">certifications</a>
+            <a href="#projects-page">projects</a>
+            <a href="#contact-page">contact</a>
+        </div>
 
-  <div class="container content">
-    <div class="montserrat h3 text-center">
-      Hello! I am
+        <img id="hamburger-btn" src="https://img.icons8.com/?size=100&id=83195&format=png&color=a3a380" alt="Open menu">
+
+        <img id="close-btn" src="https://img.icons8.com/?size=100&id=3QmmTwcR4c2b&format=png&color=fff9e3"
+            alt="Close menu">
+    </nav>
+
+    <div id="landing-page">
+        <p class="landing-subtitle">Hello! I am</p>
+        <br>
+        <p class="landing-title"><span class="landing-ballet">C</span>hristine <span class="landing-ballet">J</span>oyce
+            <span class="landing-ballet">B</span>elen</p>
+        <br>
+        <p class="landing-subtitle">A<span class="landing-apple">n aspiring</span> Full-Stack Developer</p>
     </div>
 
-    <div class="display-1 text-center">
-      <p class="playfair-display"><span class="ballet">C</span>hristine <span class="ballet">J</span>oyce <span class="ballet">B</span>elen</p>
+    <div id="about-page">
+        <p id="about-title"><span class="about-ballet">A</span>bout</p>
+
+        <img id="about-photo" src="photos/half-body-student-pic-no-bg.png" alt="My picture">
+
+        <div id="about-description">
+            <br>
+            <p>
+                I am a BS Information Technology student set to graduate in 2027. The process of building something
+                from scratch and watching it grow into something extraordinary and useful has always been
+                fascinating to me, hence the dream of becoming a full-stack developer.
+            </p>
+            <br>
+            <p>
+                I am currently looking into internship opportunities to further expand my skills and prepare myself for
+                employment.
+                I am always eager to learn, take on new challenges, and create things that matter. Ultimately, the goal
+                for me
+                is to
+                make a positive impact on society one project at a time.
+            </p>
+        </div>
     </div>
 
-    <div class="montserrat h3 text-center">
-      A<span class="shadows-into-light fs-6" style="color: #3E6102">n aspiring</span> Full-Stack Developer
-    </div>
-  </div>
+    <div id="stack-page">
 
-  <div class="container text-center fixed-bottom fs-5 montserrat navbar justify-content-center">
-    <div class="col-3 nav-item current">
-      <a>home</a>
-    </div>
-    <div class="col-3 nav-item">
-      <a class="nav-link active" href="about.html">about</a>
-    </div>
-    <div class="col-3 nav-item">
-      <a class="nav-link active" href="tech-stack.html">stack</a>
-    </div>
-    <div class="col-3 nav-item">
-      <a class="nav-link active" href="contact.html">contact</a>
-    </div>
-  </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <div id="stack-title">
+            <p><span class="stack-ballet">S</span>tack</p>
+        </div>
 
-  <script>
-    
-    anime({
-      targets: '.content div',
-      opacity: [0, 1], 
-      translateY: [50, 0],
-      delay: anime.stagger(300), 
-      duration: 1000, 
-      easing: 'easeOutExpo'
-    });
-  
-    anime({
-      targets: 'body',
-      opacity: [0, 1],
-      duration: 500,
-      easing: 'easeOutQuad'
-    });
+        <div id="stack-icons">
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTML5"
+                    class="stack-icon">
+                <p class="stack-name">HTML5</p>
+            </div>
 
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-  
-        anime({
-          targets: '.content div',
-          opacity: [1, 0],
-          translateY: [0, 50],
-          duration: 400,
-          easing: 'easeInQuad'
-        });
-  
-        setTimeout(() => {
-          window.location.href = link.href;
-        }, 400);
-      });
-    });
-  </script>
-  
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="CSS"
+                    class="stack-icon">
+                <p class="stack-name">CSS</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="JavaScript"
+                    class="stack-icon">
+                <p class="stack-name">JavaScript</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000" alt="JavaScript"
+                    class="stack-icon">
+                <p class="stack-name">TypeScript</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=40670&format=png&color=000000" alt="C" class="stack-icon">
+                <p class="stack-name">C</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000" alt="Java"
+                    class="stack-icon">
+                <p class="stack-name">Java</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=7AFcZ2zirX6Y&format=png&color=000000" alt="Dart"
+                    class="stack-icon">
+                <p class="stack-name">Dart</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=EzPCiQUqWWEa&format=png&color=000000" alt="Bootstrap"
+                    class="stack-icon">
+                <p class="stack-name">Bootstrap</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VS Code"
+                    class="stack-icon">
+                <p class="stack-name">VS Code</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=20906&format=png&color=000000" alt="Git"
+                    class="stack-icon">
+                <p class="stack-name">Git</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000" alt="Flutter"
+                    class="stack-icon">
+                <p class="stack-name">Flutter</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000" alt="Node"
+                    class="stack-icon">
+                <p class="stack-name">Node</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000" alt="Express"
+                    class="stack-icon">
+                <p class="stack-name">Express</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000" alt="React"
+                    class="stack-icon">
+                <p class="stack-name">React</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000" alt="Next"
+                    class="stack-icon">
+                <p class="stack-name">Next</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=2xFS7aynbwiR&format=png&color=000000" alt="Vercel"
+                    class="stack-icon">
+                <p class="stack-name">Vercel</p>
+            </div>
+
+            <div class="stack-container">
+                <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE4LjI2My4wMDdjLTMuMTIxLS4xNDctNS43NDQgMi4xMDktNi4xOTIgNS4wODJjLS4wMTguMTM4LS4wNDUuMjcyLS4wNjcuNDA1Yy0uNjk2IDMuNzAzLTMuOTM2IDYuNTA3LTcuODI3IDYuNTA3YTcuOSA3LjkgMCAwIDEtMy44MjUtLjk3OWEuMjAyLjIwMiAwIDAgMC0uMzAyLjE3OFYyNEgxMnYtOC45OTljMC0xLjY1NiAxLjMzOC0zIDIuOTg3LTNoMi45ODhjMy4zODIgMCA2LjEwMy0yLjgxNyA1Ljk3LTYuMjQ0Yy0uMTItMy4wODQtMi42MS01LjYwMy01LjY4Mi01Ljc1IiAvPgo8L3N2Zz4K"
+                    alt="Render" class="stack-icon">
+                <p class="stack-name">Render</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000" alt="Postman"
+                    class="stack-icon">
+                <p class="stack-name">Postman</p>
+            </div>
+
+            <div class="stack-container">
+                <img src="https://img.icons8.com/?size=100&id=tBBf3P8HL0vR&format=png&color=000000" alt="MongoDB"
+                    class="stack-icon">
+                <p class="stack-name">MongoDB</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

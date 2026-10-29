@@ -97,12 +97,20 @@ body.open-nav {
 }
 
 /* ==========    
+    typography  
+========== */
+
+.ballet {
+    font-family: var(--ballet);
+}
+
+/* ==========    
     landing  
 ========== */
 
 #landing-page {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -137,7 +145,7 @@ body.open-nav {
 
 #about-page {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     scroll-snap-align: start;
     padding: 2rem;
     display: flex;
@@ -151,8 +159,7 @@ body.open-nav {
     font-size: 3rem;
 }
 
-.about-ballet {
-    font-family: var(--ballet);
+#about-title .ballet {
     letter-spacing: 0.5rem;
 }
 
@@ -178,7 +185,7 @@ body.open-nav {
 
 #stack-page {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     scroll-snap-align: start;
     padding: 2rem;
     display: flex;
@@ -192,17 +199,18 @@ body.open-nav {
     font-size: 3rem;
 }
 
-.stack-ballet {
-    font-family: var(--ballet);
+#stack-title .ballet {
     letter-spacing: 0.5rem;
 }
 
 #stack-icons {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1rem;
-    row-gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
+
+    max-height: 75vh;
+    overflow-y: auto;
 }
 
 .stack-container {
@@ -225,6 +233,205 @@ body.open-nav {
 .stack-name {
     font-family: var(--montserrat);
     color: var(--light-rose);
+}
+
+/* ==========    
+    certifications  
+========== */
+
+#certifications-page {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+#certifications-title {
+    font-family: var(--playfair);
+    color: var(--dark-green);
+    font-size: 3rem;
+}
+
+.certifications-ballet {
+    font-family: var(--ballet)
+}
+
+#certifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.cert-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.cert-photo {
+    width: 12rem;
+    height: 9rem;
+}
+
+.cert-name {
+    font-family: var(--montserrat);
+    color: var(--light-rose);
+}
+
+/* ==========    
+    projects  
+========== */
+
+#projects-page {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+#projects-title {
+    font-family: var(--playfair);
+    color: var(--dark-green);
+    font-size: 3rem;
+}
+
+#projects-title .ballet {
+    letter-spacing: 0.5rem;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    box-shadow: 2px 2px rgba(163, 163, 128, 0.2);
+    border-radius: 1rem;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.project-name {
+    font-family: var(--playfair-sc);
+    color: var(--dark-rose);
+    font-weight: 600;
+}
+
+.project-description {
+    font-family: var(--montserrat);
+    color: var(--dark-green);
+    font-size: 0.8rem;
+    padding: 0 0.5rem 0.5rem;
+    text-indent: 1rem;
+}
+
+/* ==========    
+    contact  
+========== */
+
+#contact-page {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+#contact-title {
+    font-family: var(--playfair);
+    color: var(--dark-green);
+    font-size: 1.5rem;
+}
+
+#contact-title .ballet {
+    letter-spacing: 0.25rem;
+}
+
+.contact-text {
+    font-family: var(--apple);
+    color: var(--light-rose);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-field {
+    width: 100%;
+    background-color: var(--yellow);
+    border: solid 1px var(--dark-rose);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+
+    font-family: var(--montserrat);
+    color: var(--dark-green);
+
+    transition: 0.5s;
+    outline: none;
+}
+
+.form-field:focus {
+    border: solid 1px var(--dark-green);
+    box-shadow: 0 2px rgba(163, 163, 128, 0.2);
+}
+
+.form-field::placeholder {
+    opacity: 0.5;
+}
+
+textarea {
+    resize: none;
+}
+
+#submit-btn {
+    width: fit-content;
+    align-self: flex-end;
+    padding: 0.3rem;
+    border: none;
+    background-color: var(--dark-rose);
+    color: var(--yellow);
+    border-radius: 0.3rem;
+}
+
+#contact-socials p {
+    text-align: right;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (min-width: 768px) {
@@ -321,7 +528,7 @@ body.open-nav {
     #about-description {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         text-indent: 1.5rem;
         text-align: justify;
     }
@@ -337,6 +544,7 @@ body.open-nav {
 
     #stack-title {
         font-size: 5rem;
+        align-self: center;
     }
 
     .stack-ballet {
@@ -349,7 +557,7 @@ body.open-nav {
     }
 
     .stack-container:hover {
-        box-shadow: 10px 10px rgba(187, 133, 136, 0.2);;
+        box-shadow: 10px 10px rgba(187, 133, 136, 0.2);
     }
 
     .stack-icon {
@@ -360,6 +568,150 @@ body.open-nav {
     .stack-name {
         font-family: var(--montserrat);
         color: var(--light-rose);
+    }
+
+    /* ==========    
+        certifications  
+    ========== */
+
+    #certifications-page {
+        padding: 5rem;
+    }
+
+    #certifications-title {
+        font-size: 5rem;
+        align-self: flex-end;
+    }
+
+    .cert-photo {
+        width: 16rem;
+        height: 12rem;
+    }
+
+    .cert-name {
+        font-family: var(--montserrat);
+        color: var(--light-rose);
+    }
+
+    /* ==========    
+        projects  
+    ========== */
+
+    #projects-page {
+        padding: 5rem;
+    }
+
+    #projects-title {
+        font-size: 5rem;
+    }
+
+    #projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+
+    .project-container {
+        width: 26.67rem;
+    }
+
+    .project-thumbnail {
+        width: 26.67rem;
+        height: 15rem;
+    }
+
+    .project-name {
+        font-size: 1.25rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+
+    /* ==========    
+        contact  
+    ========== */
+
+    #contact-page {
+        padding: 5rem;
+    }
+
+    #contact-title {
+        font-size: 3rem;
+    }
+
+    #contact-title .ballet {
+        letter-spacing: 0.5rem;
+    }
+
+    #contact-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contact-text {
+        font-size: 1.5rem;
+    }
+
+    #contact-mail {
+        width: 50%;
+    }
+
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .form-field {
+        width: 100%;
+        background-color: var(--yellow);
+        border: solid 1px var(--dark-rose);
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+
+        font-family: var(--montserrat);
+        color: var(--dark-green);
+
+        transition: 0.5s;
+        outline: none;
+    }
+
+    .form-field:focus {
+        border: solid 1px var(--dark-green);
+        box-shadow: 0 2px rgba(163, 163, 128, 0.2);
+    }
+
+    .form-field::placeholder {
+        opacity: 0.5;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    #submit-btn {
+        width: fit-content;
+        align-self: flex-end;
+        padding: 0.3rem;
+        border: none;
+        background-color: var(--dark-rose);
+        color: var(--yellow);
+        border-radius: 0.3rem;
+    }
+
+    #contact-socials {
+        width: 50%;
+    }
+
+    #contact-socials p {
+        text-align: right;
+    }
+
+    #socials {
+        display: flex;
+        justify-content: center;
     }
 }
 

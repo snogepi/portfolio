@@ -68,6 +68,11 @@ const pageSectionObserver = new IntersectionObserver((entries) => {
                 easing: 'easeOutQuad',
                 begin: () => {
                     elements.forEach(el => el.style.visibility = "visible");
+                },
+                complete: (anim) => {
+                    anim.animatables.forEach(target => {
+                        target.target.style.transform = '';
+                    });
                 }
             });
         }

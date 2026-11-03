@@ -271,6 +271,7 @@ body.open-nav {
 }
 
 .cert-container {
+    max-width: 16rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -298,6 +299,7 @@ body.open-nav {
 .cert-name {
     font-family: var(--montserrat);
     color: var(--light-rose);
+    text-align: center;
 }
 
 /* ==========    

@@ -118,9 +118,13 @@ body.open-nav {
     text-align: center;
 }
 
+.landing-element {
+    opacity: 0;
+}
+
 .landing-subtitle {
     font-family: var(--montserrat);
-    color: var(--light-rose);
+    color: var(--dark-rose);
 }
 
 .landing-title {
@@ -128,10 +132,6 @@ body.open-nav {
     color: var(--dark-green);
     font-size: 3rem;
     line-height: 3rem;
-}
-
-.landing-ballet {
-    font-family: var(--ballet);
 }
 
 .landing-apple {
@@ -282,6 +282,19 @@ body.open-nav {
     height: 9rem;
 }
 
+.cert-photo.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background-color: rgba(163, 163, 128, 0.8);
+    z-index: 1000;
+    padding: 2rem;
+    cursor: pointer;
+}
+
 .cert-name {
     font-family: var(--montserrat);
     color: var(--light-rose);
@@ -377,6 +390,13 @@ body.open-nav {
     letter-spacing: 0.25rem;
 }
 
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+
 .contact-text {
     font-family: var(--apple);
     color: var(--light-rose);
@@ -409,6 +429,7 @@ body.open-nav {
 
 .form-field::placeholder {
     opacity: 0.5;
+    font-weight: 600;
 }
 
 textarea {
@@ -554,6 +575,7 @@ textarea {
     #stack-icons {
         row-gap: 1.5rem;
         justify-content: space-evenly;
+        padding: 0.5rem;
     }
 
     .stack-container:hover {
@@ -646,8 +668,7 @@ textarea {
     }
 
     #contact-content {
-        display: flex;
-        justify-content: space-evenly;
+        flex-direction: row;
     }
 
     .contact-text {
@@ -659,58 +680,29 @@ textarea {
     }
 
     #contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
+        gap: 0.5rem;
     }
 
     .form-field {
-        width: 100%;
-        background-color: var(--yellow);
-        border: solid 1px var(--dark-rose);
-        border-radius: 0.5rem;
-        padding: 0.25rem 0.5rem;
-
-        font-family: var(--montserrat);
-        color: var(--dark-green);
-
-        transition: 0.5s;
-        outline: none;
-    }
-
-    .form-field:focus {
-        border: solid 1px var(--dark-green);
-        box-shadow: 0 2px rgba(163, 163, 128, 0.2);
+        font-size: 0.9rem;
     }
 
     .form-field::placeholder {
-        opacity: 0.5;
-    }
-
-    textarea {
-        resize: none;
+        opacity: 0.8;
+        font-size: 0.9rem;
     }
 
     #submit-btn {
-        width: fit-content;
-        align-self: flex-end;
-        padding: 0.3rem;
-        border: none;
-        background-color: var(--dark-rose);
-        color: var(--yellow);
-        border-radius: 0.3rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
     }
 
     #contact-socials {
         width: 50%;
     }
 
-    #contact-socials p {
-        text-align: right;
-    }
-
     #socials {
-        display: flex;
         justify-content: center;
     }
 }

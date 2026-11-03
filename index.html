@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Homemade+Apple&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <title>Christine Joyce Belen</title>
 </head>
 
@@ -31,12 +32,12 @@
     </nav>
 
     <div id="landing-page">
-        <p class="landing-subtitle">Hello! I am</p>
+        <p class="landing-subtitle landing-element">Hello! I am</p>
         <br>
-        <p class="landing-title"><span class="ballet">C</span>hristine <span class="ballet">J</span>oyce
+        <p class="landing-title landing-element"><span class="ballet">C</span>hristine <span class="ballet">J</span>oyce
             <span class="ballet">B</span>elen</p>
         <br>
-        <p class="landing-subtitle">A<span class="landing-apple">n aspiring</span> Full-Stack Developer</p>
+        <p class="landing-subtitle landing-element">A<span class="landing-apple">n aspiring</span> Full-Stack Developer</p>
     </div>
 
     <div id="about-page">
@@ -193,7 +194,7 @@
         </div>
 
         <div id="certifications">
-            <div class="cert-container">
+            <div class="cert-container cert-modal">
                 <img class="cert-photo" src="photos/Word-2019-Associate.jpg" alt="Word 2019 Associate">
                 <p class="cert-name">Word 2019 Associate</p>
             </div>
@@ -258,12 +259,18 @@
         <div id="contact-content">
             <div id="contact-mail">
                 <p class="contact-text">send me a mail...</p>
-                <form id="contact-form" action="">
-                    <input type="text" class="form-field" id="first-name" name="firstName" placeholder="First Name">
-                    <input type="text" class="form-field" id="last-name" name="lastName" placeholder="Last Name">
-                    <input type="text" class="form-field" id="email" name="email" placeholder="Email Address">
-                    <textarea name="message" class="form-field" id="message" placeholder="Message" rows="5"></textarea>
-                    <button id="submit-btn">Submit</button>
+                <form action="https://api.web3forms.com/submit" method="post" id="contact-form">
+
+                    <input type="hidden" name="access_key" value="c18901f8-7655-4281-bda2-ef98aec50764">
+
+                    <input type="text" class="form-field" id="first-name" name="firstName" placeholder="First Name" required>
+                    <input type="text" class="form-field" id="last-name" name="lastName" placeholder="Last Name" required>
+                    <input type="text" class="form-field" id="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" class="form-field" id="message" placeholder="Message" rows="5" required></textarea>
+
+                    <!-- <input type="hidden" name="redirect" value="snogepi link"> -->
+
+                    <button type="submit" id="submit-btn">Submit</button>
                 </form>
             </div>
 

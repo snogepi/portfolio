@@ -44,7 +44,52 @@ anime({
     targets: '#landing-page .landing-element',
     opacity: [0, 1],
     translateY: [20, 0],
-    delay: anime.stagger(500),
-    duration: 1000,
+    delay: anime.stagger(150),
+    duration: 800,
     easing: 'easeOutQuad'
+});
+
+const sectionObserverOptions = {
+    threshold: 0.55
+};
+
+const pageSectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const elements = entry.target.querySelectorAll('.anim-element');
+
+        if (entry.isIntersecting) {
+            anime.remove(elements);
+            anime({
+                targets: elements,
+                opacity: [0, 1],
+                translateY: [30, 0],
+                delay: anime.stagger(150),
+                duration: 800,
+                easing: 'easeOutQuad',
+                begin: () => {
+                    elements.forEach(el => el.style.visibility = "visible");
+                }
+            });
+        }
+
+        else {
+            anime.remove(elements);
+            anime({
+                targets: elements,
+                opacity: [1, 0],
+                translateY: [0, -20],
+                duration: 400,
+                easing: 'easeInQuad',
+                complete: () => {
+                    elements.forEach(el => el.style.visibility = "hidden");
+                }
+            });
+        }
+    });
+}, sectionObserverOptions);
+
+const sections = document.querySelectorAll('#landing-page, #about-page, #stack-page, #certifications-page, #projects-page, #contact-page');
+
+sections.forEach(section => {
+    pageSectionObserver.observe(section);
 });

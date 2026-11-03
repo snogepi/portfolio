@@ -455,6 +455,15 @@ textarea {
     justify-content: space-evenly;
 }
 
+/* ==========    
+    for transitions  
+========== */
+
+.anim-element {
+    opacity: 0;
+    visibility: hidden;
+}
+
 @media (min-width: 768px) {
     
     /* ==========    

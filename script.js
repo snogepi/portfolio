@@ -4,6 +4,7 @@ const closeBtn = document.getElementById("close-btn");
 const navLinks = navMenu.querySelectorAll("a");
 
 const certPhotos = document.querySelectorAll(".cert-photo");
+const projectContainers = document.querySelectorAll(".project-container");
 
 hamburgerBtn.addEventListener("click", () => {
     navMenu.classList.add("active");
@@ -39,6 +40,12 @@ certPhotos.forEach(item => {
         item.classList.toggle("fullscreen");
     });
 });
+
+projectContainers.forEach(item => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("fullscreen");
+    });
+})
 
 anime({
     targets: '#landing-page .landing-element',
